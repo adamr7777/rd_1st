@@ -13,12 +13,12 @@ h3 {
 
 h1 {
     color: whitesmoke;
-    font-size: 2.25em; /*36px*/
+    font-size: 1.75rem;
 }
 
 h2 {
     color: #451c7a;
-    font-size: 1.75em;
+    font-size: 1.375rem;
     margin-top: 0;
 }
 
@@ -53,14 +53,14 @@ a:active {
 }
 
 .btn {
+    display: block;
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;
     padding: 10px 20px;
     border-radius: 4.6px;
-    margin-right: 0.5em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .btn-dark {
@@ -89,7 +89,7 @@ a:active {
 header, 
 section, 
 footer {
-    padding: 46px 0;
+    padding: 1.25em 0;
 }
 
 header, 
@@ -101,11 +101,23 @@ header,
     color: whitesmoke;
 }
 
+
+.section-two-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+
+.feature-item {
+    flex: 1 220px;
+}
+
+
 .container {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
-    /* border: 3px dotted red; */
 }
 
 .main-image {
@@ -117,13 +129,8 @@ header,
     margin-left: auto;
 }
 
-.section-two-image-container {
-    display: flex;
-    flex-direction: column;
-    
-}
-
 .feature-image {
+    width: 100%;
     border-radius: 4.6px;
     margin-bottom: 1em;
 }
@@ -134,13 +141,96 @@ footer {
 }
 
 
-@media(min-width: 548px) {
+/* ----- NAVIGATION ----- */
+
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8em 0;
+    font-size: 1.125rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+
+
+/* @media(min-width: 548px) {
     .section-two-image-container {
-        flex-direction: row;
+        display: flex;
         justify-content: space-between;
     }
     .feature-image {
         width: 48.8%;
         
+    }
+} */
+
+@media(max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: 1.5em;
+    }
+
+    nav a {
+        display: block;
+    }
+
+
+    li:not(:last-child) {
+        border-bottom: 1px dotted #a190b6;
+    }
+}
+
+@media(min-width: 768px) {          /*here*/
+    header, 
+    section, 
+    footer {
+        padding: 2.875em;
+    }
+
+    h1 {
+        font-size: 2.25rem; 
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .subheading {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;        
+    }
+
+
+    li {
+        margin-left: 1em;
     }
 }
